@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: 'http://145.223.19.134:3002/', 
+  origin: 'http://145.223.19.134:3002', 
   credentials: true, 
   optionsSuccessStatus: 200
 };
