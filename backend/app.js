@@ -9,10 +9,16 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: 'http://bookmanagement.vedprep.co.in', 
+  origin: 'http://145.223.19.134:3002', 
   credentials: true, 
   optionsSuccessStatus: 200
 };
+// const corsOptions = {
+//   origin: 'http://localhost:5173', 
+//   credentials: true, 
+//   optionsSuccessStatus: 200
+// };
+
 app.use(cors(corsOptions));
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
