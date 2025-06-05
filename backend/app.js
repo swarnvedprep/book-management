@@ -8,12 +8,23 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = [
+  'http://145.223.19.134:3002', 
+  'http://bookmanagement.vedprep.co.in',
+  'https://bookmanagement.vedprep.co.in'
+];
+
 const corsOptions = {
-  origin: 'http://145.223.19.134:3002', 
-  credentials: true, 
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
   optionsSuccessStatus: 200
 };
-
 app.use(cors(corsOptions));
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));

@@ -9,9 +9,9 @@ const navLinks = [
   { to: '/bundles', label: 'Bundles', roles: ['admin'] },
   { to: '/users', label: 'Users', roles: ['admin'] },
   { to: '/orders', label: 'Orders', roles: ['admin', 'executive', 'councellor'] },
-  { to: '/app-data', label: 'App Req', roles: ['admin', 'executive', 'councellor'] },
-  { to: '/mannual-data', label: 'Mannual Req', roles: ['admin', 'executive', 'councellor'] },
-  { to: '/reports/stock', label: 'Reports', roles: ['admin', 'operations_manager'] },
+  // { to: '/app-data', label: 'App Req', roles: ['admin', 'executive', 'councellor'] },
+  // { to: '/mannual-data', label: 'Mannual Req', roles: ['admin', 'executive', 'councellor'] },
+  { to: '/reports/stock', label: 'Stock', roles: ['admin', 'operations_manager'] },
 ];
 
 const Navbar = () => {
