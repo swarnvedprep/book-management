@@ -779,6 +779,10 @@ const handleCheckboxChange = (e) => {
               </div>
             )}
             <div className="flex justify-between text-lg font-semibold pt-2 border-t">
+              <span>Selected Books Price(₹):</span>
+              <input type="number" className='border-2 rounded-md border' onChange={(e)=>setTotalPrice(parseInt(e.target.value))} value={totalPrice}/>
+            </div>
+            <div className="flex justify-between text-lg font-semibold pt-2 border-t">
               <span>Total Price:</span>
               <span>₹{(totalPrice + (formData.courier.charges || 0))}</span>
             </div>

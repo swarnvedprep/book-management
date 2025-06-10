@@ -75,7 +75,7 @@ export const BookForm = () => {
         toast.success('Book updated successfully!');
       } else {
         await createBook(formData);
-        toast.success('Book created successfully!');
+        // toast.success('Book created successfully!');
       }
       navigate('/books');
     } catch (error) {
@@ -125,6 +125,8 @@ export const BookForm = () => {
                   <option value="GATE">GATE</option>
                   <option value="NET">NET</option>
                   <option value="JAM">JAM</option>
+                  <option value="CUET">CUET</option>
+                  <option value="UPSC">UPSC</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
